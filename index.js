@@ -301,7 +301,9 @@ Use lotsOfArt to do the following:
 function lotsOfArt(artistArray) {
   /*Your Code Here*/
   const copiedArray = [...artistArray];
-  const lotsOfArt = copiedArray.filter((artist) => artist.paintings > 100);
+  const lotsOfArt = copiedArray
+    .filter((artist) => artist.paintings > 100)
+    .map((artist) => artist.name);
   return lotsOfArt;
 }
 
